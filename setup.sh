@@ -31,13 +31,14 @@ az webapp create --name $apiappname --resource-group $RESOURCE_GROUP --plan $api
 printf "\nSetting the account-level deployment credentials ...(4/7)\n\n"
 
 
-DEPLOY_USER="gabrieloliveira851@hotmail.com"
+DEPLOY_USER="gabrieloliveira851"
 DEPLOY_PASSWORD="@Gabri8511"
 
 az webapp deployment user set --user-name $DEPLOY_USER --password $DEPLOY_PASSWORD --verbose
 
 
 GIT_URL="https://$DEPLOY_USER@$apiappname.scm.azurewebsites.net/$apiappname.git"
+
 
 # Create Web App with local-git deploy
 
