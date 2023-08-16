@@ -42,7 +42,7 @@ GIT_URL="https://github.com/gbzitoo/apiviacao-apim.git"
 
 # Create Web App with local-git deploy
 
-REMOTE_NAME=production
+REMOTE_NAME=origin
 
 
 # Set remote on src
