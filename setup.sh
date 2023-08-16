@@ -63,7 +63,7 @@ printf "\nGit push... (7/7)\n\n"
 
 # printf "When prompted for a password enter this: $DEPLOY_PASSWORD\n"
 # git push --set-upstream $REMOTE_NAME master
-git push "https://$DEPLOY_USER:$DEPLOY_PASSWORD@$apiappname.scm.azurewebsites.net/$apiappname.git"
+git push "https://github.com/gbzitoo/apiviacao-apim.git"
 
 
 printf "Setup complete!\n\n"
