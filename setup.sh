@@ -25,7 +25,7 @@ az appservice plan create --name $apiappname --resource-group $RESOURCE_GROUP --
 
 printf "\nCreating API App ... (3/7)\n\n"
 
-az webapp create --name $apiappname --resource-group $RESOURCE_GROUP --plan $apiappname --deployment-local-git --verbose
+az webapp create --name $apiappname --resource-group $RESOURCE_GROUP --plan $PLAN_NAME --deployment-local-git --verbose
 
 
 printf "\nSetting the account-level deployment credentials ...(4/7)\n\n"
