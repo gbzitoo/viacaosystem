@@ -37,7 +37,7 @@ DEPLOY_PASSWORD="@Gabri8511"
 az webapp deployment user set --user-name $DEPLOY_USER --password $DEPLOY_PASSWORD --verbose
 
 
-GIT_URL="https://$DEPLOY_USER@$apiappname.scm.azurewebsites.net/$apiappname.git"
+GIT_URL="https://github.com/gbzitoo/apiviacao-apim.git"
 
 
 # Create Web App with local-git deploy
