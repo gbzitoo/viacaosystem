@@ -15,7 +15,7 @@ git config --global user.email "$GIT_EMAIL"
 RESOURCE_GROUP=$(az group list --query "[0].name" -o tsv)
 
 # Create App Service plan
-PLAN_NAME=aviacaoResource
+PLAN_NAME=ASP-apiviacaogroup-bc70
 
 
 printf "\nCreating App Service plan in FREE tier ... (2/7)\n\n"
