@@ -1,12 +1,12 @@
 ﻿#!/bin/bash
 
-apiappname=ShoeCoAPI$(openssl rand -hex 5)
+apiappname="apiviacao-apim"
 
 printf "Setting username and password for Git ... (1/7)\n\n"
 
 
-GIT_USERNAME=gitName$Random
-GIT_EMAIL=a@b.c
+GIT_USERNAME="Gabriel Oliveira AZURE"
+GIT_EMAIL="gabrieloliveira851@hotmail.com"
 
 git config --global user.name "$GIT_USERNAME"
 git config --global user.email "$GIT_EMAIL"
@@ -15,7 +15,7 @@ git config --global user.email "$GIT_EMAIL"
 RESOURCE_GROUP=$(az group list --query "[0].name" -o tsv)
 
 # Create App Service plan
-PLAN_NAME=myPlan
+PLAN_NAME=aviacaoResource
 
 
 printf "\nCreating App Service plan in FREE tier ... (2/7)\n\n"
@@ -31,8 +31,8 @@ az webapp create --name $apiappname --resource-group $RESOURCE_GROUP --plan $api
 printf "\nSetting the account-level deployment credentials ...(4/7)\n\n"
 
 
-DEPLOY_USER="myName1$(openssl rand -hex 5)"
-DEPLOY_PASSWORD="Pw1$(openssl rand -hex 10)"
+DEPLOY_USER="gabrieloliveira851@hotmail.com"
+DEPLOY_PASSWORD="@Gabri8511"
 
 az webapp deployment user set --user-name $DEPLOY_USER --password $DEPLOY_PASSWORD --verbose
 
