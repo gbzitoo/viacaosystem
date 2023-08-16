@@ -31,7 +31,7 @@ az webapp create --name $apiappname --resource-group $RESOURCE_GROUP --plan $api
 printf "\nSetting the account-level deployment credentials ...(4/7)\n\n"
 
 
-DEPLOY_USER="gabrieloliveira851"
+DEPLOY_USER="gbzitoo"
 DEPLOY_PASSWORD="@Gabri8511"
 
 az webapp deployment user set --user-name $DEPLOY_USER --password $DEPLOY_PASSWORD --verbose
@@ -63,7 +63,7 @@ printf "\nGit push... (7/7)\n\n"
 
 # printf "When prompted for a password enter this: $DEPLOY_PASSWORD\n"
 # git push --set-upstream $REMOTE_NAME master
-git push "https://github.com/gbzitoo/apiviacao-apim.git"
+git push "https://$DEPLOY_USER:$DEPLOY_PASSWORD@$apiappname.scm.azurewebsites.net/$apiappname.git"
 
 
 printf "Setup complete!\n\n"
